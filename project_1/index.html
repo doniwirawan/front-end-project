@@ -6,14 +6,26 @@
     <title>Aplikasi ubah warna</title>
 </head>
 <body>
-    <h1>Aplikasi ubah warna di javascript</h1>
-    <h3>Warna Background</h3>
-    <input type="color" id="bg-color">
-    <br>
-    <h3>Warna Text</h3>
-    <input type="color" id="text-color">
-    <script>
 
+    <h1>aplikasi pengubah warna</h1>
+    <label for="">Warna background</label>
+    <input type="color" id="bg-color" />
+    <br>
+    <label for="">Warna text</label>
+    <input type="color" id="txt-color" />
+    <script>
+        var bgColor = document.getElementById('bg-color');
+        var txtColor = document.getElementbyId('txt-color');
+
+        bgColor.addEventListener("change",(event) => {
+            document.body.style.backgroundColor = bgColor.value;
+        });
+
+        txtColor.addEventListener("change",(event)=> {
+            document.body.style.color = txtColor.value;
+        });
     </script>
+
+
 </body>
 </html>
